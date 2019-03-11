@@ -55,6 +55,7 @@
         <p><em>or</em></p>
         <h4>What is that Web Developer talking about?</h4>
       </section>
+
       <!-- Thanks to GDI -->
       <section>
         <h2>Thank You</h2>
@@ -68,11 +69,10 @@
       <section>
         <h2>What we'll cover in this class</h2>
         <ul>
-          <li>Hardware &amp; Software</li>
+          <li>How the Web works</li>
           <li>Programming languages</li>
           <li>Brief intro to Data Science</li>
-          <li>Building a web site</li>
-          <li>Web development professionals</li>
+          <li>Some hands-on programming</li>
         </ul>
         <br><br>
         <p><small>Plus terms and definitions throughout</small></p>
@@ -129,16 +129,16 @@
 
         <section>
           <h3>Step 2: Your computer looks up the website's IP address</h3>
-          <p>Each website has a unique code, called an IP address, like a street address.<p>
-              <img src="images/restaurant_address.jpg" style="width:450px" alt="Front of restaurant" />
-              <p>A good way to think of the basics of how the web works is to think of a restaurant.</p>
-              <p>Think of the web site and the IP address as the address of a restaurant.</p>
-
-              <aside class="notes">
-                <p>DNS Servers are spread throughout the world.</p>
-                <p>Your ISP, like Comcast or Time Warner Cable, probably provides your DNS server.</p>
-                <p>Your computer also has an IP address; that's how the page gets back to you.</p>
-              </aside>
+          <p>Each website has a unique code, called an IP address, like a street address.</p>
+          <img src="images/restaurant_address.jpg" style="width:450px" alt="Front of restaurant" />
+          <p>A good way to think of the basics of how the web works is to think of a restaurant.</p>
+          <p>Think of the web site and the IP address as the address of a restaurant.</p>
+        
+          <aside class="notes">
+            <p>DNS Servers are spread throughout the world.</p>
+            <p>Your ISP, like Comcast or Time Warner Cable, probably provides your DNS server.</p>
+            <p>Your computer also has an IP address; that's how the page gets back to you.</p>
+          </aside>
         </section>
 
         <section>
@@ -203,8 +203,7 @@
 
         <section>
           <h3>Step 1: Open a text editor</h3>
-          <p>Visual Studio Code, Sublime Text, or Atom are all good choices. You can also use Notepad (on Windows) or
-            TextEdit (on Mac), which are basic but come preinstalled</p>
+          <p>Windows has a built-in text editor called Notepad. On a Mac it's called TextEdit. They're basic but they'll do for today!</p>
         </section>
 
         <section>
@@ -215,9 +214,18 @@
 
         <section>
           <h3>Step 3: Write some HTML code</h3>
-          <p>Type the following text exactly into <code>HelloWorld.html</code>:</p>
-          <pre><code class="html">&lt;h1&gt;Hello, World!&lt;/h1&gt;</code></pre>
-          <p>Save the file.</p>
+          <ul>
+            <li>Type the following text <em>exactly</em> &mdash; computers are very picky &mdash; into
+              <code>HelloWorld.html</code>:</li>
+            <pre><code class="html">&lt;h1&gt;Hello, World!&lt;/h1&gt;</code></pre>
+            <li>The <code>&lt;h1&gt;</code> and <code>&lt;/h1&gt;</code> define a <em>tag</em>.</li>
+            <ul>
+              <li>Tags are how you explain to the browser how a given piece of text should be displayed.</li>
+              <li>This is an <code>&lt;h1&gt;</code> tag, which tells your browser that its content is a level-1 heading.</li>
+              <li>The content of this tag is the text "Hello, World!"</li>
+            </ul>
+            <li>Save the file on the desktop.</li>
+          </ul>
         </section>
 
         <section>
@@ -236,6 +244,10 @@
           <p>Reload your browser. It should look like this:</p>
           <img height="300" src="images/HelloWorld-screenshot2.png" alt="With different styles" />
           <p>Experiment with changing the style or the text.</p>
+        </section>
+
+        <section>
+          <h2>Time with mentors</h2>
         </section>
       </section>
 
@@ -262,7 +274,7 @@
               the content of a web site</p>
             <p class="fragment"><strong>CSS</strong>: Cascading Style Sheets - A language used to describe the
               presentation of the content</p>
-            <p class="fragment"><strong>JavaScript</strong>: Coding Language that is read by browsers and can animate
+            <p class="fragment"><strong>JavaScript</strong>: Programming language that is read by browsers and can animate
               web pages and populate data</p>
           </div>
           <aside class="notes">
@@ -289,12 +301,13 @@
 
       <section>
         <h3>What is a Programming Language?</h3>
-        <p class="fragment">A programming language is basically a set of strings (letters, numbers, commands) that is
-          changed into machine code that the computer can understand.</p>
+        <p>Humans understand text; computers understand 1s and 0s. A programming language is a piece of software which bridges the gap.</p>
+        <p>You write commands for the computer as text, and the programming language translates them into 0s and 1s for the computer.</p>
+        <p>Each different programming language has its own definition of what the commands do and how the text should be formatted.</p>
       </section>
 
       <section>
-        <h3>Parsing Languages &amp; Media</h3>
+        <h3>Programming Languages</h3>
         <div style="width: 48%; margin-right: 2%; float: left; text-align: left;">
           <ul class="fragment" style="list-style-type: none; margin: 0;">
             <li style="text-decoration: underline;"><strong>Client Side</strong></li>
@@ -430,8 +443,75 @@
         </section>
       </section>
 
-      <!-- Data Science -->
+      <section>
+        <section>
+          <h2>Exercise: Making your web page interactive</h2>
+        </section>
 
+        <section>
+          <h3>Step 1: create a button</h3>
+          <p>Open <code>HelloWorld.html</code> back up in your text editor.</p>
+          <p>Let's add a <code>&lt;button&gt;</code> tag to the page.</p>
+          <pre><code class="html">&lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;button&gt;Click me&lt;/button&gt;
+</code></pre>
+          <img height="300" src="images/HelloWorld-button.png" alt="With a button" />
+        </section>
+
+        <section>
+          <h3>Step 2: Make the button do something</h3>
+          <p>Clicking on the button doesn't do anything, because we haven't told the computer what should happen.</p>
+          <p>Let's add an <code>onclick</code> action to the button. <code>onclick</code> contains some JavaScript code which the
+            computer will run when you click on the button.</p>
+          <pre><code class="html">&lt;h1&gt;Hello, World!&lt;/h1&gt;
+&lt;button onclick="alert('You clicked me!')"&gt;Click me&lt;/button&gt;
+</code></pre>
+          <p>Make sure to copy this exactly. Pay extra attention to the two different types of quote marks.</p>
+          <p><code>alert</code> tells the computer to create a popup window. In this case we're telling it to say "You clicked me!"</p>
+        </section>
+
+        <section>
+          <h3>Step 3: Test your code</h3>
+          <p>Reload the file in your web browser and try clicking the button!</p>
+          <img height="300" src="images/HelloWorld-popup.gif" alt="The popup in action" />
+        </section>
+
+        <section>
+          <h2>Time with mentors</h2>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h3>Tools of the trade</h3>
+          <p class="left-align">To build your web site, you will probably need:</p>
+          <ul>
+            <li class="fragment">A <strong>text editor</strong> like SublimeText, Notepad, or TextWrangler to write your
+              code. Many can be found for free.</li>
+            <li class="fragment">A <strong>web browser</strong> like Chrome, Firefox, or Safari to test your code. All
+              popular modern browsers are free.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Tools of the trade</h3>
+          <p class="left-align">You will also need:</p>
+          <ul>
+            <li class="fragment">An <strong>FTP (file transfer protocol) client</strong> such as WinSCP, Cyberduck, or
+              CoffeeCup FTP to get files from your computer to the server. Many are free.</li>
+            <li class="fragment">Optionally, an <strong>image editor</strong> such as Photoshop to edit images which
+              will be used on the web site. Some are available for free.</li>
+          </ul>
+          <aside class="notes">
+            <p>FTP is appropriate for beginning websites, may not be applicable as you get deeper into development in
+              lieu of other deployment methods</p>
+          </aside>
+        </section>
+      </section>
+
+
+      <!-- Data Science -->
+      
       <section>
         <h2>Data Science</h2>
         <p>We have received lots of requests about Data Science, so here goes a quick summary about what's it about.</p>
@@ -456,6 +536,20 @@
           <li class="fragment"><strong>Predict</strong>: Based on the past, train models that will predict (even in real
             time) certain events of interest. Given my past, how will the future look like?</li>
         </ul>
+      </section>
+
+      <section>
+        <h2>Homework</h2>
+        <p>Download this file containing a list of technologies: <a href="http://bit.ly/StackCodingHomework">http://bit.ly/StackCodingHomework</a></p>
+        <p>For each one, use Google to answer the following questions:</p>
+        <ul>
+          <li>What is this technology? Is it a <strong>language</strong>, a <strong>library</strong>, a
+            <strong>database</strong>, or something else?</li>
+          <li>What type of developers use this technology? Web (front- or back-end?), desktop, mobile, data scientist,
+            or another type of developer?</li>
+          <li>What other technologies are usually associated with this one?</li>
+        </ul>
+        <p>You can discuss your research in your tutorial groups next week</p>
       </section>
 
       <section>
