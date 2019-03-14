@@ -1,3 +1,10 @@
+For each one, use Google to answer the following questions:
+
+What is this technology? Is it a language, a library, a database, or something else?
+What type of developers use this technology? Web (front- or back-end?), desktop, mobile, data scientist, or another type of developer?
+What other technologies are usually associated with this one?
+You can discuss your research in your tutorial groups next week
+
 SASS
 Xamarin
 Elastic
